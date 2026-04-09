@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feliz aniversário 🎉</title>
+
+<style>
+body{
+background: linear-gradient(120deg,#ff9a9e,#fad0c4);
+font-family: Arial;
+text-align:center;
+color:white;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+}
+
+#mensagem{
+display:none;
+font-size:28px;
+margin-top:20px;
+animation: aparecer 2s;
+}
+
+@keyframes aparecer{
+from{opacity:0; transform:translateY(30px)}
+to{opacity:1; transform:translateY(0)}
+}
+</style>
+
+</head>
+
+<body>
+<div id="player" style="position:fixed; bottom:10px; right:10px; background:#000000aa; color:white; padding:8px 12px; border-radius:10px; font-family:Arial;">
+🎵 Tocando: Embrace (The end)
+</div>
+<h1 style="font-size:40px; color:#ff4d6d;">🎂 Feliz aniversário Thaynaa 🎉</h1>
+
+<button onclick="mostrar()">Ler mensagem</button>
+<div id="mensagem">
+
+<center>
+<img src="foto.jpg" width="250" style="border-radius:15px;">
+</center>
+
+Felizzz aniversárioooo Thaynaaaaaaaaaa! 🎉🥳
+
+Espero que hoje seja um dia muito especial pra vc, cheio de coisas boas,e momentos felizes. Que vc consiga conquistar tudo aquilo que deseja e que todos os seus sonhos se realizem.
+
+Quero que vc lembre sempre que é uma pessoa muito legal e especial, e que eu gosto muito de vc. Minha melhor amiga! Vc sempre vai ter um lugar muito importante no meu coração.
+
+Espero que um dia a gente ainda possa se conhecer pessoalmente tbm kkkkkk, porque sua amizade é algo que eu valorizo muito.
+
+E é isso… mais uma vez, feliz aniversário! Que dê tudo certo na sua vida. E eu quero bolo viu???? Thaynazete Costa Braga 🍰
+
+Obgd por ser essa pessoas incrível.
+</div>
+
+
+</script>
+<style>
+.heart{
+position:fixed;
+top:-10px;
+color:red;
+font-size:20px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(100vh);
+}
+}
+</style>
+
+<script>
+function criarCoracao(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+}
+
+setInterval(criarCoracao,300);
+</script>
+
+<audio id="musica" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
+<script>
+function mostrar(){
+document.getElementById("mensagem").style.display="block";
+
+var audio = document.getElementById("musica");
+audio.currentTime = 35;
+audio.play();
+}
+
+function criarCoracao(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+}
+
+setInterval(criarCoracao,300);
+</script>
